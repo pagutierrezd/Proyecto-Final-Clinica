@@ -1,2 +1,4 @@
-package co.edu.uniquindio.clinica.modelo;public class PQRS {
+package co.edu.uniquindio.clinica.modelo;
+
+public class PQRS {
 }
