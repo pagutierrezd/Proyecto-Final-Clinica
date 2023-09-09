@@ -24,6 +24,6 @@ public class Cita {
     private LocalDateTime fechaCreacion;
     private LocalDateTime fecha;
     private LocalDateTime hora;
-    private String descripcion;
+    private String motivo;
 
 }
