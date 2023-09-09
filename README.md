@@ -9,7 +9,7 @@ Proyecto realizado con:
 ## Integrantes
 * Paula Andrea Gutiérrez
 * Jenny Marcela Tellez
-* Juan David Giraldo Barrera
+* Juan David Giraldo Barrero
 
 ## Universidad del Quindío
 ## Programación Avanzada
