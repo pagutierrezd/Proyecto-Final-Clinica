@@ -4,8 +4,6 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
-import java.util.List;
 
 @Entity
 @Getter
@@ -13,24 +11,24 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class PQRS implements Serializable {
+public class Atencion implements Serializable {
 
     @Id
     @EqualsAndHashCode.Include
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int codigo;
 
-    private LocalDateTime fechaCreacion;
+    private String diagnostico;
 
-    private String motivo;
+    private String tratamiento;
 
-    private TipoPQRS tipoPQRS;
+    private String notasMedicas;
 
-    private EstadoPQRS estadoPQRS;
+    private String asignacionEspecialista; //O se le asigna la enumeracion de especialidad?
 
-    @ManyToOne
+    @OneToOne
     private Cita cita;
 
-    @OneToMany(mappedBy = "pqrs")
-    private List<Mensaje> mensajes;
+    @OneToOne
+    private Cita citaAsignada;
 }

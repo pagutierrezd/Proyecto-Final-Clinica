@@ -4,8 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
-import java.util.List;
+import java.time.LocalDate;
 
 @Entity
 @Getter
@@ -13,24 +12,15 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class PQRS implements Serializable {
+public class DiaLibre implements Serializable {
 
     @Id
     @EqualsAndHashCode.Include
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int codigo;
 
-    private LocalDateTime fechaCreacion;
-
-    private String motivo;
-
-    private TipoPQRS tipoPQRS;
-
-    private EstadoPQRS estadoPQRS;
+    private LocalDate dia;
 
     @ManyToOne
-    private Cita cita;
-
-    @OneToMany(mappedBy = "pqrs")
-    private List<Mensaje> mensajes;
+    private Medico medico;
 }

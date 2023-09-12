@@ -13,7 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class PQRS implements Serializable {
+public class Cita implements Serializable {
 
     @Id
     @EqualsAndHashCode.Include
@@ -22,15 +22,27 @@ public class PQRS implements Serializable {
 
     private LocalDateTime fechaCreacion;
 
+    private LocalDateTime fechaCita;
+
     private String motivo;
 
-    private TipoPQRS tipoPQRS;
-
-    private EstadoPQRS estadoPQRS;
+    private EstadoCita estadoCita;
 
     @ManyToOne
-    private Cita cita;
+    private Medico medico;
 
-    @OneToMany(mappedBy = "pqrs")
-    private List<Mensaje> mensajes;
+    @ManyToOne
+    private Paciente paciente;
+
+    @OneToOne(mappedBy = "cita")
+    private Atencion atencion;
+
+    @OneToOne(mappedBy = "citaAsignada")
+    private Atencion atencionAsignada;
+
+    @OneToMany(mappedBy = "cita")
+    private List<PQRS> pqrsList;
+
+    @OneToMany(mappedBy = "cita")
+    private List<CambioCita> cambioCitas;
 }

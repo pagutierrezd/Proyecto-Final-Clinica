@@ -4,8 +4,8 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Entity
 @Getter
@@ -13,24 +13,19 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class PQRS implements Serializable {
+public class HorarioMedico implements Serializable {
 
     @Id
     @EqualsAndHashCode.Include
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int codigo;
 
-    private LocalDateTime fechaCreacion;
+    private LocalDate dia;
 
-    private String motivo;
+    private LocalDateTime horaInicio;
 
-    private TipoPQRS tipoPQRS;
-
-    private EstadoPQRS estadoPQRS;
+    private LocalDateTime horaFin;
 
     @ManyToOne
-    private Cita cita;
-
-    @OneToMany(mappedBy = "pqrs")
-    private List<Mensaje> mensajes;
+    private Medico medico;
 }
