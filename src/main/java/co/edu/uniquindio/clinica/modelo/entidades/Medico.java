@@ -1,5 +1,6 @@
-package co.edu.uniquindio.clinica.modelo;
+package co.edu.uniquindio.clinica.modelo.entidades;
 
+import co.edu.uniquindio.clinica.modelo.enums.Especialidad;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -21,5 +22,6 @@ public class Medico extends Usuario implements Serializable {
     @OneToMany(mappedBy = "medico")
     private List<HorarioMedico> horariosMedico;
 
+    @Column(nullable = false)
     private Especialidad especialidad;
 }

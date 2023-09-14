@@ -1,9 +1,10 @@
-package co.edu.uniquindio.clinica.modelo;
+package co.edu.uniquindio.clinica.modelo.entidades;
 
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -12,24 +13,19 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Mensaje implements Serializable {
+public class HorarioMedico implements Serializable {
 
     @Id
     @EqualsAndHashCode.Include
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int codigo;
 
-    private LocalDateTime fechaCreacion;
+    private LocalDate dia;
 
-    private String mensaje;
+    private LocalDateTime horaInicio;
+
+    private LocalDateTime horaFin;
 
     @ManyToOne
-    private PQRS pqrs;
-
-    @ManyToOne
-    private Cuenta cuenta;
-
-    @OneToOne
-    @JoinColumn(name = "mensajeAnterior") //Relación de la clase con sigo misma
-    private Mensaje mensajeAnterior;
+    private Medico medico;
 }

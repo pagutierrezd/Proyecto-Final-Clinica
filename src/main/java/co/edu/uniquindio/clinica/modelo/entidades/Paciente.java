@@ -1,5 +1,7 @@
-package co.edu.uniquindio.clinica.modelo;
+package co.edu.uniquindio.clinica.modelo.entidades;
 
+import co.edu.uniquindio.clinica.modelo.enums.EPS;
+import co.edu.uniquindio.clinica.modelo.enums.TipoSangre;
 import jakarta.persistence.*;
 import lombok.*;
 
