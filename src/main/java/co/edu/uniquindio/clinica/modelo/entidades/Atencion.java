@@ -18,13 +18,17 @@ public class Atencion implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int codigo;
 
+    @Column(nullable = false)
     private String diagnostico;
 
+    @Column(nullable = false)
     private String tratamiento;
 
+    @Column(nullable = false)
     private String notasMedicas;
 
-    private String asignacionEspecialista; //O se le asigna la enumeracion de especialidad?
+    @Column(nullable = true)
+    private String asignacionEspecialista;
 
     @OneToOne
     private Cita cita;

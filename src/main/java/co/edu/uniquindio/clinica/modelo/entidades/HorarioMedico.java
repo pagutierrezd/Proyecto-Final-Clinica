@@ -20,10 +20,13 @@ public class HorarioMedico implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int codigo;
 
+    @Column(nullable = false)
     private LocalDate dia;
 
+    @Column(nullable = false)
     private LocalDateTime horaInicio;
 
+    @Column(nullable = false)
     private LocalDateTime horaFin;
 
     @ManyToOne

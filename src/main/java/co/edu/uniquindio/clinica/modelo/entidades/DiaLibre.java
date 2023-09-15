@@ -19,6 +19,7 @@ public class DiaLibre implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int codigo;
 
+    @Column(nullable = false)
     private LocalDate dia;
 
     @ManyToOne

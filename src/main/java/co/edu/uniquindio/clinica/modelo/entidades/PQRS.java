@@ -22,12 +22,16 @@ public class PQRS implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int codigo;
 
+    @Column(nullable = false)
     private LocalDateTime fechaCreacion;
 
+    @Column(nullable = false)
     private String motivo;
 
+    @Column(nullable = false)
     private TipoPQRS tipoPQRS;
 
+    @Column(nullable = false, updatable = true)
     private EstadoPQRS estadoPQRS;
 
     @ManyToOne

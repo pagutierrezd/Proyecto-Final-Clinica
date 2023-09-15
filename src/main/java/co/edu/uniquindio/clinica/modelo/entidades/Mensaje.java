@@ -19,8 +19,10 @@ public class Mensaje implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int codigo;
 
+    @Column(nullable = false)
     private LocalDateTime fechaCreacion;
 
+    @Column(nullable = false, length = 100)
     private String mensaje;
 
     @ManyToOne
@@ -30,6 +32,6 @@ public class Mensaje implements Serializable {
     private Cuenta cuenta;
 
     @OneToOne
-    @JoinColumn(name = "mensajeAnterior") //Relación de la clase con sigo misma
+    @JoinColumn(name = "mensajeAnterior")
     private Mensaje mensajeAnterior;
 }

@@ -15,6 +15,4 @@ public interface CitaServicios {
     void listarCitasPendientesMedico();
 
     void atenderCita();
-
-    void
 }

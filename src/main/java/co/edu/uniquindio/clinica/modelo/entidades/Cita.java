@@ -21,12 +21,16 @@ public class Cita implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int codigo;
 
+    @Column(nullable = false)
     private LocalDateTime fechaCreacion;
 
+    @Column(nullable = false, unique = true)
     private LocalDateTime fechaCita;
 
+    @Column(nullable = false)
     private String motivo;
 
+    @Column(nullable = false, updatable = true)
     private EstadoCita estadoCita;
 
     @ManyToOne

@@ -19,8 +19,10 @@ public class CambioCita implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int codigo;
 
+    @Column(nullable = false)
     private LocalDateTime fecha;
 
+    @Column(nullable = false, length = 200)
     private String motivo;
 
     @ManyToOne
