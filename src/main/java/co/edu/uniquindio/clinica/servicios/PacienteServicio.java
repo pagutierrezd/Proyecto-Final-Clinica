@@ -7,7 +7,7 @@ public interface PacienteServicio {
 
     String registrarse(PacienteDTO)throws Exception;
 
-    String editarPerfil(int codigo,PacienteDTO);
+    String editarPerfil(int codigo,PacienteDTO) throws Exception;
 
     String eliminarCuenta(int codigo);
 
