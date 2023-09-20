@@ -8,7 +8,7 @@ public record PacienteDTO(
         int codigoCiudad,
         String telefono,
         String email,
-        String contraseña,
+        String password,
         String urlFoto;
 
 ) {
