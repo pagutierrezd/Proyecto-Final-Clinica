@@ -1,6 +1,9 @@
 package co.edu.uniquindio.clinica.dto;
 
-public record InfoPQRSDTOAdmin(
+import java.time.LocalDateTime;
+import java.util.List;
+
+public record InfoPQRSDTO(
         int codigo,
         String estado,
         int codigoCita,

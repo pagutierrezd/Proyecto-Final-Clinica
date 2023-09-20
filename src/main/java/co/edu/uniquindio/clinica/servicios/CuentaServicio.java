@@ -1,2 +1,6 @@
-package co.edu.uniquindio.clinica.servicios;public interface CuentaServicio {
+package co.edu.uniquindio.clinica.servicios;
+
+public interface CuentaServicio {
+
+
 }

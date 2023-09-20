@@ -1,2 +1,4 @@
-package co.edu.uniquindio.clinica.servicios;public interface CambioCitaServicio {
+package co.edu.uniquindio.clinica.servicios;
+
+public interface CambioCitaServicio {
 }

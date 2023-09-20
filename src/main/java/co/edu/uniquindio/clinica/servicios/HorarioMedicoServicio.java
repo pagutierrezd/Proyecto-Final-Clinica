@@ -1,2 +1,4 @@
-package co.edu.uniquindio.clinica.servicios;public interface HorarioMedicoServicio {
+package co.edu.uniquindio.clinica.servicios;
+
+public interface HorarioMedicoServicio {
 }
