@@ -3,16 +3,12 @@ package co.edu.uniquindio.clinica.dto;
 import co.edu.uniquindio.clinica.modelo.enums.EstadoPQRS;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
-public record DetallePQRSDTO(
+public record ItemPQRSDTO(
         int codigo,
         EstadoPQRS estado,
-        String motivoPQRS,
-        String nombrePaciente,
-        String nombreMedico,
-        String especialidad,
+        String motivo,
         LocalDateTime fecha,
-        List<RespuestaDTO> mensajes
+        String nombrePaciente
 ) {
 }

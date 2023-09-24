@@ -1,36 +1,37 @@
 package co.edu.uniquindio.clinica.servicios;
 
-import co.edu.uniquindio.clinica.dto.PQRSPacienteDTO;
-import co.edu.uniquindio.clinica.dto.PacienteDTO;
+import co.edu.uniquindio.clinica.dto.*;
+import co.edu.uniquindio.clinica.dto.paciente.*;
+
+import java.util.List;
 
 public interface PacienteServicio {
 
-    String registrarse(PacienteDTO)throws Exception;
+    int registrarse(RegistroPacienteDTO registroPacienteDTO)throws Exception;
 
-    String editarPerfil(int codigo,PacienteDTO) throws Exception;
+    int editarPerfil(int codigoPaciente, RegistroPacienteDTO registroPacienteDTO) throws Exception;
 
-    String eliminarCuenta(int codigo);
+    void eliminarCuenta(int codigoPaciente) throws Exception;
 
-    void enviarLinkRecuperacion();
+    DetallePacienteDTO verDetallePaciente(int codigo) throws Exception;
 
-    void cambiarPassword();
+    void enviarLinkRecuperacion(String email) throws Exception;
 
-    void agendarCita();
+    void cambiarPassword(NuevaPasswordDTO nuevaPasswordDTO) throws Exception;
 
-    String crearPQRS(PQRSPacienteDTO) throws Exception;
+    int agendarCita(RegistroCitaDTO registroCitaDTO) throws Exception;
 
-    void listarPQRSPaciente();
+    int crearPQRS(RegistroPQRSDTO registroPQRSDTO) throws Exception;
 
-    void responderPQRS();
+    List<ItemPQRSDTO> listarPQRSPaciente(int codigoPaciente) throws Exception;
 
-    void listarCitasPaciente();
+    DetallePQRSDTO verDetallePQRS(int codigo) throws Exception;
 
-    void filtrarCitasPorFecha();
+    int responderPQRS(RegistroRespuestaDTO registroRespuestaDTO) throws Exception;
 
-    void filtrarCitasPorMedico();
+    List<ItemCitaDTO> listarCitasPaciente(int codigoPaciente) throws Exception;
 
-    void verDetalleCita();
+    void filtrarCitas(FiltroBusquedaDTO filtroBusquedaDTO) throws Exception;
 
+    DetalleAtencionMedicaDTO verDetalleCita(int codigoCita) throws Exception;
 }
-
-
