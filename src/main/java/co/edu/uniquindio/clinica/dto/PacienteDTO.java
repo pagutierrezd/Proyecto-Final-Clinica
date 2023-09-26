@@ -9,7 +9,5 @@ public record PacienteDTO(
         String telefono,
         String email,
         String password,
-        String urlFoto;
-
-) {
+        String urlFoto ) {
 }

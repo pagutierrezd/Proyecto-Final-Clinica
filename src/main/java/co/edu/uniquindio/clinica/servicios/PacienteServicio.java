@@ -1,35 +1,38 @@
 package co.edu.uniquindio.clinica.servicios;
 
-import co.edu.uniquindio.clinica.dto.PQRSPacienteDTO;
-import co.edu.uniquindio.clinica.dto.PacienteDTO;
+import co.edu.uniquindio.clinica.dto.*;
+
+import java.util.List;
 
 public interface PacienteServicio {
 
-    String registrarse(PacienteDTO)throws Exception;
+    String registrarse(PacienteDTO pacienteDTO)throws Exception;
 
-    String editarPerfil(int codigo,PacienteDTO) throws Exception;
+    String editarPerfil(int codigo,PacienteDTO pacienteDTO) throws Exception;
 
-    String eliminarCuenta(int codigo);
+    String eliminarCuenta(int codigo)throws Exception;
 
-    void enviarLinkRecuperacion();
+    void enviarLinkRecuperacion(EmailDTO emailDTO) throws Exception;
 
-    void cambiarPassword();
+    void cambiarPassword(NuevaPasswordDTO nuevaPasswordDTO) throws Exception;
 
     void agendarCita();
 
-    String crearPQRS(PQRSPacienteDTO) throws Exception;
+    String crearPQRS(PQRSPacienteDTO pqrsPacienteDTO) throws Exception;
 
-    void listarPQRSPaciente();
+    List<InfoPQRSDTO> listarPQRSPaciente(int codigoPaciente) throws Exception;
 
-    void responderPQRS();
+    DetallePQRSDTO verDetallePQRS(int codigo) throws Exception;
 
-    void listarCitasPaciente();
+    void responderPQRS(RespuestaDTO respuestaDTO)throws Exception;
 
-    void filtrarCitasPorFecha();
+    List<InfoCitasDTO>listarCitasPaciente(int codigoPaciente)throws Exception;
 
-    void filtrarCitasPorMedico();
+    FiltroBusquedaFechaDTO filtrarCitasPorFecha()throws Exception;
 
-    void verDetalleCita();
+     FiltroBusquedaMedicoDTO filtrarCitasPorMedico(int codigoMedico) throws Exception;
+
+    DetalleAtencionMedicaDTO verDetalleCita(int codigoCita) throws Exception;
 
 }
 

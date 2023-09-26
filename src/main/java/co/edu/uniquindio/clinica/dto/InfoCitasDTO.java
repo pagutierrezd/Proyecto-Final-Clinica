@@ -1,7 +1,4 @@
 package co.edu.uniquindio.clinica.dto;
 
-public record RespuestaDTO() {
-
-
-
+public record InfoCitasDTO() {
 }
