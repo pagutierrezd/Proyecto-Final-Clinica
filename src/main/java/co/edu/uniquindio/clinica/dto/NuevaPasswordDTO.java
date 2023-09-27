@@ -1,4 +1,4 @@
 package co.edu.uniquindio.clinica.dto;
 
-public record NuevaPasswordDTO() {
+public record NuevaPasswordDTO(String nuevacontraseña) {
 }

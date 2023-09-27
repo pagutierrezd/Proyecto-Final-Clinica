@@ -12,11 +12,11 @@ public interface PacienteServicio {
 
     String eliminarCuenta(int codigo)throws Exception;
 
-    void enviarLinkRecuperacion(EmailDTO emailDTO) throws Exception;
+    void enviarLinkRecuperacion(String email) throws Exception;
 
     void cambiarPassword(NuevaPasswordDTO nuevaPasswordDTO) throws Exception;
 
-    void agendarCita();
+    void agendarCita(RegistroCitaDTO registroCitaDTO)throws Exception;
 
     String crearPQRS(PQRSPacienteDTO pqrsPacienteDTO) throws Exception;
 
