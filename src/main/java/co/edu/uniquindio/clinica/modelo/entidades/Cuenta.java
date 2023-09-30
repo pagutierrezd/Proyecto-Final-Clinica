@@ -25,6 +25,8 @@ public class Cuenta implements Serializable {
     @Column(nullable = false)
     private String password;
 
+    private boolean estado;
+
     @OneToMany(mappedBy = "cuenta") //Preguntar por esto!
     private List<Mensaje> mensajes;
 }

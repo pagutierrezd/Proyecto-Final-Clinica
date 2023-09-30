@@ -28,7 +28,7 @@ public class Atencion implements Serializable {
     private String notasMedicas;
 
     @Column(nullable = true)
-    private String asignacionEspecialista;
+    private boolean asignacionEspecialista;
 
     @OneToOne
     private Cita cita;

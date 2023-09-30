@@ -7,6 +7,7 @@ public record RegistroAtencionDTO(
         int codigoMedico,
         String notasMedicas,
         String tratamiento,
-        String diagnostico
+        String diagnostico,
+        boolean asignaciónEspecialista
 ) {
 }
