@@ -30,8 +30,4 @@ public class Mensaje implements Serializable {
 
     @ManyToOne
     private Cuenta cuenta;
-
-    @OneToOne
-    @JoinColumn(name = "mensajeAnterior")
-    private Mensaje mensajeAnterior;
 }

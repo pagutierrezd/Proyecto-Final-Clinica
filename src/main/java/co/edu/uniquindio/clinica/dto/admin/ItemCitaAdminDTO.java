@@ -11,7 +11,6 @@ public record ItemCitaAdminDTO(
         String nombreMedico,
         String especialidad,
         EstadoCita estadoCita,
-        LocalDateTime fecha,
-        String motivo
+        LocalDateTime fecha
 ) {
 }
