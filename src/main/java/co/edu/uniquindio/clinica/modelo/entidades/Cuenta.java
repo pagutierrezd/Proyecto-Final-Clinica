@@ -1,5 +1,6 @@
 package co.edu.uniquindio.clinica.modelo.entidades;
 
+import co.edu.uniquindio.clinica.modelo.enums.EstadoUsuario;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -25,7 +26,7 @@ public class Cuenta implements Serializable {
     @Column(nullable = false)
     private String password;
 
-    private boolean estado;
+    private EstadoUsuario estado;
 
     @OneToMany(mappedBy = "cuenta") //Preguntar por esto!
     private List<Mensaje> mensajes;
