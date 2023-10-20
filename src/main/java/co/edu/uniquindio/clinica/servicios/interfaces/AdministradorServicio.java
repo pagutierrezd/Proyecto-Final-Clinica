@@ -1,4 +1,4 @@
-package co.edu.uniquindio.clinica.servicios;
+package co.edu.uniquindio.clinica.servicios.interfaces;
 
 import co.edu.uniquindio.clinica.dto.*;
 import co.edu.uniquindio.clinica.dto.admin.DetalleMedicoDTO;
@@ -7,6 +7,8 @@ import co.edu.uniquindio.clinica.dto.admin.ItemMedicoDTO;
 import co.edu.uniquindio.clinica.dto.admin.RegistroMedicoDTO;
 
 import java.util.List;
+
+
 
 public interface AdministradorServicio {
 
