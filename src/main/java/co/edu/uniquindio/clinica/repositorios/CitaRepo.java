@@ -15,9 +15,9 @@ import java.util.List;
 @Repository
 public interface CitaRepo extends JpaRepository<Cita, Integer> {
 
-    Cita findBy(int codigo);
+    Cita findByCodigo(int codigo);
 
-    List<Cita> findAllByMedicoCodigoAndEstadoCita(int codigoMedico, EstadoCita estadoCita);
+
 
 
     List<Cita> findAllByMedicoCodigo(int codigoMedico);

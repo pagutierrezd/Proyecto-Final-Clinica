@@ -10,7 +10,7 @@ import java.util.List;
 
 public interface MedicoServicio {
 
-    List<ItemCitaAdminDTO> listarCitasPendientes(int codigoMedico, EstadoCita estadoCita) throws Exception;
+    List<ItemCitaAdminDTO> listarCitasPendientes(int codigoMedico) throws Exception;
 
     int atenderCita(RegistroAtencionDTO registroAtencionDTO) throws Exception;
 

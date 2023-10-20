@@ -29,12 +29,12 @@ public class MedicoServicioImpl implements MedicoServicio {
     private final CitaRepo citaRepo;
     private final AtencionRepo atencionRepo;
 
-@Override
+
 // Listar las citas que el medico tiene pendiente
-   public List<ItemCitaAdminDTO> listarCitasPendientes(int codigoMedico,EstadoCita estadoCita) throws Exception{
+   public List<ItemCitaAdminDTO> listarCitasPendientes(int codigoMedico) throws Exception{
 
 
-       List<Cita> citasPendientes =citaRepo.findAllByMedicoCodigoAndEstadoCita(codigoMedico,estadoCita);
+       List<Cita> citasPendientes =citaRepo.findAllByMedicoCodigo(codigoMedico);
        if (citasPendientes.isEmpty())
        {
            throw new Exception("No hay citas pendientes para el médico" + codigoMedico);
