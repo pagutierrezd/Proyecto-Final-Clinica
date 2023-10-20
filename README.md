@@ -7,7 +7,6 @@ Proyecto realizado con:
 * SpringBoot
 
 ## Integrantes
-* Paula Andrea Gutiérrez
 * Jenny Marcela Tellez
 * Juan David Giraldo Barrero
 
